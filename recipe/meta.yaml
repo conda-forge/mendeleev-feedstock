@@ -32,6 +32,8 @@ requirements:
     - numpy
     - pandas
     - sqlalchemy
+    - pyfiglet
+    - colorama
 
 test:
   imports:
