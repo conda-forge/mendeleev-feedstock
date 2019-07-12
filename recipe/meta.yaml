@@ -36,6 +36,8 @@ requirements:
 test:
   imports:
     - mendeleev
+  commands:
+    - element.py --help
 
 about:
   home: https://bitbucket.org/lukaszmentel/mendeleev
