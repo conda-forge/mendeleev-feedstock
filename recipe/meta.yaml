@@ -10,9 +10,11 @@ source:
   sha256: 912b3e3c287b9d7ea3b0e79e18311382e37d4ca73f90b3d0e27b862587cf7d4f
 
 build:
-  number: 0
+  number: 1
+  entry_points:
+    - element.py = mendeleev.cli:clielement
   script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [win]
+  noarch: python
 
 requirements:
   build:
@@ -30,10 +32,14 @@ requirements:
     - numpy
     - pandas
     - sqlalchemy
+    - pyfiglet
+    - colorama
 
 test:
   imports:
     - mendeleev
+  commands:
+    - element.py --help
 
 about:
   home: https://bitbucket.org/lukaszmentel/mendeleev
