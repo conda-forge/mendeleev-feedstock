@@ -1,5 +1,5 @@
 {% set name = "mendeleev" %}
-{% set version = "0.4.5" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 912b3e3c287b9d7ea3b0e79e18311382e37d4ca73f90b3d0e27b862587cf7d4f
+  sha256: 644c2b2228444e1c91a50100f4a0c4f8bbadd0e883f6c140bf384638dbfea3cd
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - element.py = mendeleev.cli:clielement
   script: "{{ PYTHON }} -m pip install . -vv"
