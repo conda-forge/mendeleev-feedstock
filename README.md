@@ -1,7 +1,7 @@
 About mendeleev
 ===============
 
-Home: https://bitbucket.org/lukaszmentel/mendeleev
+Home: https://github.com/lmmentel/mendeleev
 
 Package license: MIT
 
