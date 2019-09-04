@@ -10,7 +10,7 @@ source:
   sha256: 8817d2a62d377eaac13b561569206f7f8cf70b0807a633a4b104e5712f794246
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - element.py = mendeleev.cli:clielement
   script: "{{ PYTHON }} -m pip install . -vv"
@@ -40,7 +40,7 @@ test:
     - element.py --help
 
 about:
-  home: https://bitbucket.org/lukaszmentel/mendeleev
+  home: https://github.com/lmmentel/mendeleev
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
@@ -50,7 +50,7 @@ about:
     This package provides an API for accessing various properties 
     of elements from the periodic table of elements.
   doc_url: http://mendeleev.readthedocs.org
-  dev_url: https://bitbucket.org/lukaszmentel/mendeleev
+  dev_url: https://github.com/lmmentel/mendeleev
 
 extra:
   recipe-maintainers:
