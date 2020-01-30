@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
     - pyfiglet
     - colorama
@@ -26,7 +26,7 @@ requirements:
     - pandas
     - numpy
   run:
-    - python
+    - python >=3.5
     - numpy
     - pandas
     - sqlalchemy
