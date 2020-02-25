@@ -38,6 +38,7 @@ test:
     - mendeleev
   commands:
     - element.py --help
+    - pip check
 
 about:
   home: https://github.com/lmmentel/mendeleev
