@@ -27,6 +27,7 @@ requirements:
     - numpy
   run:
     - python >=3.5
+    - pip
     - numpy
     - pandas
     - sqlalchemy
