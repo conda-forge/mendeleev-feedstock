@@ -5,9 +5,13 @@ Home: https://github.com/lmmentel/mendeleev
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mendeleev-feedstock/blob/master/LICENSE.txt)
 
 Summary: A perdioc table of elements API and a database of atomic properties.
+
+Development: https://github.com/lmmentel/mendeleev
+
+Documentation: http://mendeleev.readthedocs.org
 
 This package provides an API for accessing various properties
 of elements from the periodic table of elements.
