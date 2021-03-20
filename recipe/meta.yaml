@@ -25,6 +25,7 @@ requirements:
     - sqlalchemy
     - pandas
     - numpy
+    - poetry
   run:
     - python >=3.5
     - pip
