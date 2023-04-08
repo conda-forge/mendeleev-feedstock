@@ -8,9 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d3fada5e72f3b0fc90e83d7f95dac3cb312303dd17abf3fd3c16992febddad32
+  patches:
+    - sqlalchemy.patch
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - element.py = mendeleev.cli:clielement
   script: {{ PYTHON }} -m pip install . -vv
@@ -31,7 +33,7 @@ requirements:
     - pip
     - numpy
     - pandas
-    - sqlalchemy <2
+    - sqlalchemy
     - pyfiglet
     - colorama
     - pygments
