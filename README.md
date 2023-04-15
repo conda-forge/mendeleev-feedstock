@@ -1,11 +1,11 @@
-About mendeleev
-===============
+About mendeleev-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mendeleev-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/lmmentel/mendeleev
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mendeleev-feedstock/blob/main/LICENSE.txt)
 
 Summary: A perdioc table of elements API and a database of atomic properties.
 
