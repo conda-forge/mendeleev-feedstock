@@ -1,5 +1,5 @@
 {% set name = "mendeleev" %}
-{% set version = "0.12.1" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d3fada5e72f3b0fc90e83d7f95dac3cb312303dd17abf3fd3c16992febddad32
+  sha256: a4f35c67b51f7c7dcb63ed687b624bbf8faa7db88891a7fcfacd9cdbc0567882
   patches:
     - sqlalchemy.patch
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - element.py = mendeleev.cli:clielement
   script: {{ PYTHON }} -m pip install . -vv
