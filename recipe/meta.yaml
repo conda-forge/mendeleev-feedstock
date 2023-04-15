@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: a4f35c67b51f7c7dcb63ed687b624bbf8faa7db88891a7fcfacd9cdbc0567882
-  patches:
-    - sqlalchemy.patch
 
 build:
   number: 0
