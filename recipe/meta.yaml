@@ -1,5 +1,5 @@
 {% set name = "mendeleev" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c8fabc213886d80973ce472f21891d43d78e2eecf9a39a1f4842eeb0d256aa7c
+  sha256: 3f42b4a684fb1127ab04afebc46413e7971b2a6e24fa5746b10c79872b018315
 
 build:
   number: 0
