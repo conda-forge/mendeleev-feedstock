@@ -1,5 +1,5 @@
 {% set name = "mendeleev" %}
-{% set version = "0.16.2" %}
+{% set version = "0.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5d9e385d8be96c470741e0c77528c38d2025913c26168153d0c02d0fdd63d08a
+  sha256: 1f62ee134771bb27ddcc71f17584a453b75e8860ae7b71591f949d284c263144
 
 build:
   number: 0
@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.8.1,<3.13
     - pip
     - pyfiglet
     - colorama
@@ -27,14 +27,14 @@ requirements:
     - numpy
     - poetry
   run:
-    - python >=3.5
+    - python >=3.8.1,<3.13
     - pip
-    - numpy
-    - pandas
-    - sqlalchemy
-    - pyfiglet
-    - colorama
-    - pygments
+    - numpy >=1.21
+    - pandas >=1.0.0
+    - sqlalchemy >=1.4.0
+    - pyfiglet >=0.8,<0.9
+    - colorama >=0.4.6,<0.5.0
+    - pygments >=2.11.2,<3.0
 
 test:
   imports:
