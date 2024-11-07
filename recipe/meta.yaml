@@ -37,6 +37,7 @@ requirements:
     - colorama >=0.4.6,<0.5.0
     - pygments >=2.11.2,<3.0
     - deprecated
+    - pydantic
 
 test:
   imports:
