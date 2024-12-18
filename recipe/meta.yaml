@@ -10,7 +10,7 @@ source:
   sha256: 7d513a3be0c2b45369c3c041eb949a76bc92ee42d833b1dee0048a919d3f9a78
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - element.py = mendeleev.cli:clielement
   script: {{ PYTHON }} -m pip install . -vv
@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8.1,<3.13
+    - python {{ python_min }}
     - pip
     - pyfiglet
     - colorama
@@ -28,7 +28,7 @@ requirements:
     - poetry
     - setuptools
   run:
-    - python >=3.8.1,<3.13
+    - python >={{ python_min }},<3.13
     - pip
     - numpy <2.0,>=1.26
     - pandas >=1.0.0
@@ -40,6 +40,8 @@ requirements:
     - pydantic
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - mendeleev
   commands:
