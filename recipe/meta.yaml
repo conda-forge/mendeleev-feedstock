@@ -1,5 +1,5 @@
 {% set name = "mendeleev" %}
-{% set version = "0.19.0" %}
+{% set version = "0.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7d513a3be0c2b45369c3c041eb949a76bc92ee42d833b1dee0048a919d3f9a78
+  sha256: e138b321746359168a0381cfe98d9913f9c6a9f43bc685e76c6f267670703965
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - element.py = mendeleev.cli:clielement
   script: {{ PYTHON }} -m pip install . -vv
@@ -30,14 +30,14 @@ requirements:
   run:
     - python >={{ python_min }},<3.13
     - pip
-    - numpy <2.0,>=1.26
-    - pandas >=1.0.0
+    - numpy >=2.0.0,<3.0.0
+    - pandas >=2.1.0,<3.0.0
     - sqlalchemy >=1.4.0
-    - pyfiglet >=0.8,<0.9
+    - pyfiglet >=0.8.0.post1,<0.9.0
     - colorama >=0.4.6,<0.5.0
-    - pygments >=2.11.2,<3.0
-    - deprecated
-    - pydantic
+    - pygments >=2.11.2,<3.0.0
+    - deprecated >=1.2.14,<2.0.0
+    - pydantic >=2.9.2,<3.0.0
 
 test:
   requires:
