@@ -7,8 +7,8 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 numpy:
-- '1.23'
+- '1.26'
 python_min:
 - '3.9'
-target_platform:
-- linux-64
+with_python_gt_312:
+- 'False'
