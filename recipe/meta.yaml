@@ -1,5 +1,6 @@
 {% set name = "mendeleev" %}
 {% set version = "0.20.1" %}
+{% set python_min = "3.12" %}  # [with_python_gt_312 == True]
 
 package:
   name: {{ name|lower }}
@@ -10,7 +11,7 @@ source:
   sha256: 26f27099f0587cab82dd7f84ee31a5c48e994eb478ea2a92756c5fd50764f7da
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - element.py = mendeleev.cli:clielement
   script: {{ PYTHON }} -m pip install . -vv
@@ -30,7 +31,8 @@ requirements:
   run:
     - python >={{ python_min }},<3.13
     - pip
-    - numpy >=1.21.0,<2.0.0
+    - numpy <3.0,>=2.0  # [with_python_gt_312 == True]
+    - numpy >=1.21.0,<2.0.0  # [with_python_gt_312 == False]
     - pandas >=1.0.0
     - sqlalchemy >=1.4.0
     - pyfiglet >=0.8.0.post1,<0.9.0
