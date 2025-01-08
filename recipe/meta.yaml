@@ -1,5 +1,6 @@
 {% set name = "mendeleev" %}
 {% set version = "0.20.1" %}
+{% set python_min = "3.12" %}  # [with_python_gt_312 == true]
 
 package:
   name: {{ name|lower }}
@@ -14,6 +15,7 @@ build:
   entry_points:
     - element.py = mendeleev.cli:clielement
   script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
 
 requirements:
   host:
@@ -29,8 +31,8 @@ requirements:
   run:
     - python >={{ python_min }},<3.13
     - pip
-    - numpy <3.0,>=2.0  # [py>=312]
-    - numpy >=1.21.0,<2.0.0  # [py<312]
+    - numpy <3.0,>=2.0  # [with_python_gt_312 == true]
+    - numpy >=1.21.0,<2.0.0  # [with_python_gt_312 == false]
     - pandas >=1.0.0
     - sqlalchemy >=1.4.0
     - pyfiglet >=0.8.0.post1,<0.9.0
