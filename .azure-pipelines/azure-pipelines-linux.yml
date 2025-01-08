@@ -8,8 +8,12 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_:
-        CONFIG: linux_64_
+      linux_64_with_python_gt_312False:
+        CONFIG: linux_64_with_python_gt_312False
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_with_python_gt_312True:
+        CONFIG: linux_64_with_python_gt_312True
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
   timeoutInMinutes: 360
