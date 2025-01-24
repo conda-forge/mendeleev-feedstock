@@ -1,3 +1,3 @@
-with_python_gt_312:
- - True
- - False
+python_min:
+  - "3.9"
+  - "3.12"
