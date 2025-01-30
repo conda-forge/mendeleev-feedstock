@@ -1,5 +1,6 @@
 {% set name = "mendeleev" %}
 {% set version = "0.20.1" %}
+{% set build = "3" %}
 {% set python_max = ",<3.12a0" if python_min == "3.9" else "" %}
 
 package:
@@ -11,7 +12,8 @@ source:
   sha256: 26f27099f0587cab82dd7f84ee31a5c48e994eb478ea2a92756c5fd50764f7da
 
 build:
-  number: 2
+  number: {{ build }}
+  string: "pymin{{ python_min|replace('.', '') }}_h{{ PKG_HASH }}_{{ build }}"
   entry_points:
     - element.py = mendeleev.cli:clielement
   script: {{ PYTHON }} -m pip install . -vv
