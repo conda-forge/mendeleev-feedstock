@@ -1,5 +1,5 @@
 {% set name = "mendeleev" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 {% set build = 0 %}
 {% set python_max = ",<3.12a0" if python_min == "3.9" else "" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fb4d5699a02b2d17ae09d2727307b2fe4c50c43f4a3bc750d8cd99f16b4aa83e
+  sha256: 34081dd9ae58823287382e8defde8276003d8c2784367bb1271e8e32e7fd07e8
 
 build:
   number: {{ build }}
@@ -34,11 +34,11 @@ requirements:
     - python >={{ python_min }}{{ python_max }}
     - pip
     {% if python_max == "" %}
-    - numpy <3.0,>=2.0
+    - numpy >=2.0.0,<3.0.0
     {% else %}
     - numpy >=1.21.0,<2.0.0
     {% endif %}
-    - pandas >=1.0.0
+    - pandas >=1.1.0
     - sqlalchemy >=1.4.0
     - pyfiglet >=0.8.0.post1,<0.9.0
     - colorama >=0.4.6,<0.5.0
