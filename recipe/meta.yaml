@@ -28,7 +28,7 @@ requirements:
     - pandas
     - numpy
     - poetry
-    - setuptools
+    - setuptools <80
   run:
     - pint >=0.24.4,<0.25.0
     - pydantic-core >=2.23.0,<3.0.0
