@@ -1,5 +1,5 @@
 {% set name = "mendeleev" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 {% set build = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 34081dd9ae58823287382e8defde8276003d8c2784367bb1271e8e32e7fd07e8
+  sha256: 8be5a6fe9c3780ffb52b179b6e0720eb5aff898e227139845b6a9b81babd67ac
 
 build:
   number: {{ build }}
@@ -30,16 +30,18 @@ requirements:
     - poetry
     - setuptools
   run:
+    - pint >=0.24.4,<0.25.0
+    - pydantic-core >=2.23.0,<3.0.0
     - python >={{ python_min }}
     - pip
     - numpy >=2.0.0,<3.0.0
-    - pandas >=1.1.0
+    - pandas >=2.1.0,<3.0.0
     - sqlalchemy >=1.4.0
     - pyfiglet >=0.8.0.post1,<0.9.0
     - colorama >=0.4.6,<0.5.0
     - pygments >=2.11.2,<3.0.0
     - deprecated >=1.2.14,<2.0.0
-    - pydantic >=2.9.2,<3.0.0
+    - pydantic >=2.12.0,<3.0.0
 
 test:
   requires:
