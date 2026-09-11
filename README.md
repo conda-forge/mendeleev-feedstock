@@ -11,11 +11,10 @@ Summary: A perdioc table of elements API and a database of atomic properties.
 
 Development: https://github.com/lmmentel/mendeleev
 
-Documentation: http://mendeleev.readthedocs.org
+Documentation: http://mendeleev.readthedocs.org/
 
 This package provides an API for accessing various properties
 of elements from the periodic table of elements.
-
 
 Current build status
 ====================
